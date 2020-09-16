@@ -16,7 +16,8 @@ public class EX0103{
         for (int i = 0; i < a.size(); i++){
             for(int j = 0; j < b.size(); j++){
                 if (a.get(i) == b.get(j)){
-                    // add like elements to destination vector
+                    // add like elements to destination vector if not already added
+                    if (!c.contains(a.get(i)))
                     c.add(a.get(i));
                 }
             }
@@ -28,7 +29,7 @@ public class EX0103{
         // driver code
         Vector<Integer> vec1 = new Vector<Integer>();
         vec1.add(1);
-        vec1.add(2);
+        vec1.add(1);
         vec1.add(3);
         Vector<Integer> vec2 = new Vector<Integer>();
         vec2.add(3);
